@@ -1,0 +1,80 @@
+.home {
+  height: 100vh;
+  padding-top: vw(198);
+
+  @media (max-width: $br1) {
+    padding-top: 132px;
+  }
+}
+
+.home__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/images/sisu-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  z-index: -1;
+
+  @media (max-width: $br1) {
+    background-position: 84% 50%;
+  }
+}
+
+.home__wrapper {
+  margin-top: vw(305);
+
+  @media (max-width: $br1) {
+    margin-top: 305px;
+  }
+}
+
+.home__block {
+  margin-left: vw(60);
+  max-width: vw(632);
+
+  @media (max-width: $br1) {
+    margin-left: 60px;
+    max-width: 632px;
+  }
+
+  @media (max-width: $br3) {
+    margin-left: 0;
+  }
+}
+
+.home__title {
+  @include bold;
+  font-weight: 900;
+  font-size: vw(72);
+  line-height: 130%;
+  letter-spacing: -0.02em;
+  color: var(--black);
+
+  @media (max-width: $br1) {
+    font-size: 72px;
+  }
+
+  @media (max-width: $br3) {
+    font-size: 48px;
+  }
+}
+
+.home__desc {
+  @include med;
+  font-size: vw(36);
+  line-height: 150%;
+  letter-spacing: -0.02em;
+  color: var(--charcoal);
+
+  @media (max-width: $br1) {
+    font-size: 36px;
+  }
+
+  @media (max-width: $br3) {
+    font-size: 20px;
+  }
+}

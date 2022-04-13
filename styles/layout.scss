@@ -27,7 +27,7 @@
 .grid {
   display: grid;
   width: 100%;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: repeat(14, 1fr);
   grid-auto-flow: column;
 
   @media (max-width: $br1) {
@@ -48,14 +48,14 @@
 }
 
 .section {
-  padding-top: vw(300);
+  padding-top: vw(240);
 
   &--nm {
     padding-top: 0;
   }
 
   &--pb {
-    padding-bottom: vw(300);
+    padding-bottom: vw(240);
   }
 
   @media (max-width: $br1) {

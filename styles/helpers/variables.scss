@@ -1,7 +1,8 @@
 :root {
-  --black: #212022;
-  --bg: #f4f4f4;
-  --white: #ffffff;
+  --black: #000000;
+  --charcoal: #333333;
+  --belize: #49D6BA;
+  --b-grey: #eeeeee;
   --red: #e73737;
 }
 
@@ -21,6 +22,6 @@ $br4: 460px;
 $easing: cubic-bezier(0.16, 1, 0.3, 1);
 
 // layouts
-$g-offset: vw(56);
+$g-offset: vw(120);
 $g-sm: 32px;
 $g-s: 20px;
