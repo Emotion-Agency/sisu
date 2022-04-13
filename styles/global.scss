@@ -17,7 +17,7 @@ body {
   // @include reg;
   height: 100vh;
   height: var(--vh);
-  overflow: hidden !important;
+  // overflow: hidden !important;
   position: relative;
   overscroll-behavior-y: none;
   @include smooth-font;

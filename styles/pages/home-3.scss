@@ -1,0 +1,41 @@
+.home-3 {
+  background-color: var(--grey);
+}
+
+.home-3__text {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  max-width: vw(960);
+  margin: 0 auto;
+
+  @media (max-width: $br1) {
+    max-width: 960px;
+  }
+}
+
+.home-3__title {
+  @include bold;
+  font-size: vw(60);
+  line-height: 130%;
+  letter-spacing: -0.02em;
+  color: var(--black);
+
+  @media (max-width: $br1) {
+    font-size: 48px;
+  }
+}
+
+.home-3__desc {
+  @include med;
+  font-size: vw(30);
+  line-height: 150%;
+  letter-spacing: -0.02em;
+  color: var(--charcoal);
+  margin-top: vw(40);
+
+  @media (max-width: $br1) {
+    font-size: 20px;
+    margin-top: 30px;
+  }
+}
