@@ -2,9 +2,7 @@
   <div id="app">
     <app-grid />
     <ui-loader />
-    <div id="scroll-container">
-      <Nuxt />
-    </div>
+    <Nuxt />
   </div>
 </template>
 
@@ -34,6 +32,7 @@ export default {
     const { raf } = await import('@emotionagency/utils')
 
     window.ss = new SmoothScroll({
+      el: document.documentElement,
       mobile: false,
       breakpoint: 960,
       passive: false,
@@ -45,9 +44,9 @@ export default {
       raf,
     })
 
-    const { default: NavbarPos } = await import('~/scripts/utils/navbarPos')
-    this.navbarPos = new NavbarPos()
-    this.navbarPos.init()
+    // const { default: NavbarPos } = await import('~/scripts/utils/navbarPos')
+    // this.navbarPos = new NavbarPos()
+    // this.navbarPos.init()
   },
 }
 </script>
