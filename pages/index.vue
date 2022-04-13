@@ -65,12 +65,26 @@
             within your Dashboards, giving you a bird’s eye view of your
             portfolio’s overall performance.
           </p>
-          <app-button class="home-4__btn" text="Quick Start" />
+          <app-button class="home-4__btn" text="Learn More" />
         </div>
       </div>
     </section>
     <section class="section home-5">
-      <div class="container grid home-5__wrapper"></div>
+      <div class="container grid home-5__wrapper">
+        <h3 class="home-5__title">
+          “SISU enables traders and investors of all backgrounds to track their
+          crypto portfolio performance better than ever before. We’re very
+          excited to see a portfolio tracker this wide-ranging and
+          customisable.”
+        </h3>
+        <p class="home-5__desc">Etiënne vantKruys <br />- TRGC</p>
+      </div>
+    </section>
+    <section class="section home-6">
+      <div class="container home-6__wrapper"></div>
+    </section>
+    <section class="section home-7">
+      <div class="container home-7__wrapper"></div>
     </section>
   </main>
 </template>

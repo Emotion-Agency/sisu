@@ -1,0 +1,44 @@
+.home-5 {
+    background-color: var(--grey);
+}
+
+.home-5__title {
+  @include col(3, 12);
+  @include bold;
+  font-size: vw(36);
+  line-height: 150%;
+  color: var(--charcoal);
+
+  @media (max-width: $br1) {
+    @include col(1, 8);
+    font-size: 36px;
+  }
+
+  @media (max-width: $br4) {
+    @include col(1, 4);
+  }
+}
+
+.home-5__desc {
+  @include col(9, 10);
+  @include row(2, 2);
+  @include bold;
+  font-size: vw(24);
+  line-height: 150%;
+  color: var(--charcoal);
+  margin-top: vw(60);
+
+  @media (max-width: $br1) {
+    @include col(6, 8);
+    font-size: 24px;
+    margin-top: 60px;
+  }
+
+  @media (max-width: $br3) {
+    @include col(5, 8);
+  }
+
+  @media (max-width: $br4) {
+    @include col(2, 4);
+  }
+}
