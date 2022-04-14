@@ -1,0 +1,130 @@
+.home-7__plates {
+  margin-top: vw(105);
+
+  @media (max-width: $br1) {
+    margin-top: 105px;
+  }
+}
+
+.home-7__plates-list {
+  @include col(3, 10);
+  display: flex;
+  align-items: center;
+  background-color: var(--white);
+  padding: vw(60) vw(98) vw(78) vw(60);
+  box-shadow: 0px 18px 60px rgba(81, 92, 89, 0.12);
+  border-radius: 24px;
+
+  @media (max-width: $br1) {
+    @include col(1, 6);
+    padding: 60px 98px 78px 60px;
+  }
+
+  @media (max-width: $br2) {
+    flex-direction: column;
+  }
+
+  @media (max-width: $br3) {
+    @include col(1, 8);
+    padding: 40px;
+  }
+
+  @media (max-width: $br4) {
+    @include col(1, 4);
+  }
+
+  &:nth-child(2) {
+    @include col(5, 12);
+    margin-top: vw(20);
+
+    @media (max-width: $br1) {
+      @include col(3, 8);
+      margin-top: 20px;
+    }
+
+    @media (max-width: $br3) {
+      @include col(1, 8);
+    }
+
+    @media (max-width: $br4) {
+      @include col(1, 4);
+    }
+  }
+
+  &:nth-child(3) {
+    @include col(3, 10);
+    margin-top: vw(20);
+
+    @media (max-width: $br1) {
+      @include col(1, 6);
+      margin-top: 20px;
+    }
+
+    @media (max-width: $br3) {
+      @include col(1, 8);
+    }
+
+    @media (max-width: $br4) {
+      @include col(1, 4);
+    }
+  }
+
+  &:nth-child(4) {
+    @include col(5, 12);
+    margin-top: vw(20);
+
+    @media (max-width: $br1) {
+      @include col(3, 8);
+      margin-top: 20px;
+    }
+
+    @media (max-width: $br3) {
+      @include col(1, 8);
+    }
+
+    @media (max-width: $br4) {
+      @include col(1, 4);
+    }
+  }
+}
+
+.home-7__text-wrapper {
+  margin-left: vw(60);
+  max-width: vw(512);
+
+  @media (max-width: $br1) {
+    margin-left: 60px;
+    max-width: 512px;
+  }
+
+  @media (max-width: $br2) {
+    margin-left: 0;
+  }
+}
+
+.home-7__plate-title {
+  @include black;
+  font-size: vw(60);
+  line-height: 130%;
+  color: var(--belize);
+  letter-spacing: -0.02em;
+
+  @media (max-width: $br1) {
+    font-size: 42px;
+  }
+}
+
+.home-7__desc {
+  @include med;
+  font-size: vw(24);
+  line-height: 150%;
+  color: var(--charcoal);
+  letter-spacing: -0.02em;
+  margin-top: vw(60);
+  width: 100%;
+
+  @media (max-width: $br1) {
+    font-size: 24px;
+    margin-top: 60px;
+  }
+}

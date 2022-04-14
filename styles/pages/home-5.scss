@@ -1,5 +1,16 @@
 .home-5 {
-    background-color: var(--grey);
+  padding-top: vw(200);
+  padding-bottom: vw(120);
+  background-color: var(--grey);
+
+  @media (max-width: $br1) {
+    padding-top: 160px;
+    padding-bottom: 120px;
+  }
+
+  @media (max-width: $br3) {
+    padding-top: 100px;
+  }
 }
 
 .home-5__title {

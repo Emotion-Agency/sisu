@@ -12,7 +12,7 @@
         </div>
       </div>
     </section>
-    <section class="section home-2">
+    <section class="section section--pb home-2">
       <div class="container grid home-2__wrapper">
         <img class="home-2__img" src="/images/home-2.jpg" alt="Image" />
         <div class="home-2__block">
@@ -26,7 +26,7 @@
         </div>
       </div>
     </section>
-    <section class="section home-3">
+    <section class="section section--pb home-3">
       <div class="container home-3__wrapper">
         <div class="home-3__text">
           <h2 class="home-3__title">Unrivalled Custom isability</h2>
@@ -55,7 +55,7 @@
         />
       </div>
     </section>
-    <section class="section home-4">
+    <section class="section section--pb home-4">
       <div class="container grid home-4__wrapper">
         <img class="home-4__img" src="/images/home-4.jpg" alt="Image" />
         <div class="home-4__block">
@@ -69,7 +69,7 @@
         </div>
       </div>
     </section>
-    <section class="section home-5">
+    <section class="home-5">
       <div class="container grid home-5__wrapper">
         <h3 class="home-5__title">
           “SISU enables traders and investors of all backgrounds to track their
@@ -82,7 +82,7 @@
         </p>
       </div>
     </section>
-    <section class="section home-6">
+    <section class="section section--pb home-6">
       <div class="container grid home-6__wrapper">
         <img class="home-6__img" src="/images/home-6.jpg" alt="Image" />
         <div class="home-6__block">
@@ -96,11 +96,18 @@
         </div>
       </div>
     </section>
-    <section class="section home-7">
+    <section class="section section--pb home-7">
       <div class="container home-7__wrapper">
         <h2 class="home-7__title">Get More with SISU</h2>
-        <ul class="home-7__plates">
-          <app-plates />
+        <ul class="grid home-7__plates">
+          <app-plates
+            v-for="plate in 4"
+            :key="plate"
+            img="/images/color-figure(2).jpg"
+            name="Figure"
+            title="Connect"
+            text="We fetch read-only data related from crypto wallets, exchange and on-chain addresses; you keep full custody of your funds at all times."
+          />
         </ul>
       </div>
     </section>
