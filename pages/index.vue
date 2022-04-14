@@ -29,7 +29,7 @@
     <section class="section section--pb home-3">
       <div class="container">
         <div class="home-3__text">
-          <h2 class="home-3__title">Unrivalled Custom isability</h2>
+          <h2 class="home-3__title">Unrivalled Customisability</h2>
           <p class="home-3__desc">
             Configure Dashboards to focus on the asset and performance data that
             matters to you most, no matter your level of knowledge or areas of
