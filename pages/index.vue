@@ -1,10 +1,15 @@
 <template>
   <main>
     <section class="section section--nm home">
-      <div class="home__bg"></div>
+      <div class="home__bg">
+        <app-video link="/videos/1" />
+      </div>
       <div class="container home__wrapper">
         <div class="home__block">
-          <h1 class="home__title">Your Assets, Your Dashboard.</h1>
+          <h1 class="home__title">
+            Your Assets,<br />
+            Your Dashboard.
+          </h1>
           <p class="home__desc">
             A crypto portfolio tracker designed for a new generation of digital
             assets.
@@ -14,7 +19,9 @@
     </section>
     <section class="section section--pb home-2">
       <div class="container grid home-2__wrapper">
-        <img class="home-2__img" src="/images/home-2.jpg" alt="Image" />
+        <div class="home-2__video">
+          <app-video link="/videos/2" />
+        </div>
         <div class="home-2__block">
           <h2 class="home-2__title">Everything In One Place</h2>
           <p class="home-2__desc">
@@ -59,7 +66,9 @@
     </section>
     <section class="section section--pb home-4">
       <div class="container grid home-4__wrapper">
-        <img class="home-4__img" src="/images/home-4.jpg" alt="Image" />
+        <div class="home-4__video">
+          <app-video link="/videos/7" />
+        </div>
         <div class="home-4__block">
           <h2 class="home-4__title">Get the Bigger Picture</h2>
           <p class="home-4__desc">
@@ -86,7 +95,9 @@
     </section>
     <section class="section section--pb home-6">
       <div class="container grid home-6__wrapper">
-        <img class="home-6__img" src="/images/home-6.jpg" alt="Image" />
+        <div class="home-6__video">
+          <app-video link="/videos/13" />
+        </div>
         <div class="home-6__block">
           <h2 class="home-6__title">Modular & Adaptive</h2>
           <p class="home-6__desc">
@@ -137,9 +148,10 @@
 import AppButton from '~/components/AppButton.vue'
 import HoverPlates from '~/components/HoverPlates.vue'
 import AppPlates from '~/components/AppPlates.vue'
+import AppVideo from '~/components/AppVideo.vue'
 
 export default {
-  components: { AppButton, HoverPlates, AppPlates },
+  components: { AppButton, HoverPlates, AppPlates, AppVideo },
   data() {
     return {
       plates: [

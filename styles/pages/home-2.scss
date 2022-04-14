@@ -2,10 +2,13 @@
   align-items: center;
 }
 
-.home-2__img {
+.home-2__video {
   @include col(1, 7);
-  display: block;
-  max-width: 100%;
+
+  video {
+    width: 100%;
+    height: 100%;
+  }
 
   @media (max-width: $br1) {
     @include col(1, 4);

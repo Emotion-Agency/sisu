@@ -32,3 +32,8 @@ body {
 .e-fixed {
   overflow: hidden !important;
 }
+
+video {
+  display: block;
+  max-width: 100%;
+}
