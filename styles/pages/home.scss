@@ -48,8 +48,7 @@
 }
 
 .home__title {
-  @include bold;
-  font-weight: 900;
+  @include black;
   font-size: vw(72);
   line-height: 130%;
   letter-spacing: -0.02em;

@@ -77,7 +77,9 @@
           excited to see a portfolio tracker this wide-ranging and
           customisable.”
         </h3>
-        <p class="home-5__desc">Etiënne vantKruys <br />- TRGC</p>
+        <p class="home-5__desc">
+          Etiënne vantKruys <br /><span class="home-5__desc-med">- TRGC</span>
+        </p>
       </div>
     </section>
     <section class="section home-6">
