@@ -72,11 +72,11 @@
   line-height: 150%;
   letter-spacing: -0.02em;
   color: var(--charcoal);
-  margin-top: vw(80);
+  margin-top: vw(40);
 
   @media (max-width: $br1) {
     font-size: 36px;
-    margin-top: 32px;
+    margin-top: 20px;
   }
 
   @media (max-width: $br3) {
