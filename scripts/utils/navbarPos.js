@@ -1,7 +1,7 @@
 import { raf } from '@emotionagency/utils'
 
 export default class NavbarPos {
-  $sc = document.querySelector('#scroll-container')
+  $sc = document.documentElement
   hovered = false
 
   constructor() {
@@ -11,13 +11,14 @@ export default class NavbarPos {
   }
 
   init() {
+    this.$navbar = document.querySelector('.navbar')
     this.scrollPos = 0
     this.scrollNav = this.scrollNav.bind(this)
     raf.on(this.scrollNav)
   }
 
   mouseHandler(e) {
-    if (e.screenY <= 300) {
+    if (e.screenY <= this.$navbar.scrollHeight + 100) {
       document.body.classList.remove('nav-hidden')
       this.hovered = true
     } else {
@@ -37,15 +38,21 @@ export default class NavbarPos {
 
     this.isHidden && this.removeVisibility()
 
+    this.isBg ? this.removeBg() : this.addBg()
+
     this.scrollPos = -this.$sc.scrollTop
   }
 
   get isHidden() {
-    return this.top < this.scrollPos && this.scrollPos < 0 && -this.top >= 0
+    return this.top < this.scrollPos && -this.scrollPos > 0 && -this.top >= 0
   }
 
   get isVisible() {
     return this.top > this.scrollPos || this.isFixed
+  }
+
+  get isBg() {
+    return -this.scrollPos <= window.innerHeight * 0.1
   }
 
   get isFixed() {
@@ -60,6 +67,18 @@ export default class NavbarPos {
   removeVisibility() {
     document.body.classList.add('nav-hidden')
     document.addEventListener('mousemove', this.mouseFunc)
+  }
+
+  addBg() {
+    this.$navbar.classList.add('add-bg')
+    // this.$navbar.classList.remove('navbar--black')
+    // this.$navbar.classList.add('navbar--bg')
+  }
+
+  removeBg() {
+    this.$navbar.classList.remove('add-bg')
+    // this.$navbar.classList.remove('navbar--bg')
+    // this.$navbar.classList.add('navbar--black')
   }
 
   destroy() {

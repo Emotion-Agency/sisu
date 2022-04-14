@@ -1,5 +1,5 @@
 <template>
-  <header class="header">
+  <header class="header navbar">
     <div class="container header__wrapper">
       <a href="#" class="header__logo">
         <svg

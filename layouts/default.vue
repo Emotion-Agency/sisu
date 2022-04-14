@@ -48,9 +48,9 @@ export default {
       raf,
     })
 
-    // const { default: NavbarPos } = await import('~/scripts/utils/navbarPos')
-    // this.navbarPos = new NavbarPos()
-    // this.navbarPos.init()
+    const { default: NavbarPos } = await import('~/scripts/utils/navbarPos')
+    this.navbarPos = new NavbarPos()
+    this.navbarPos.init()
   },
 }
 </script>

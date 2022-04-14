@@ -1,7 +1,7 @@
 <template>
   <li class="home-7__plates-list">
     <div class="home-7__img-wrapper">
-      <img :src="img" :alt="name" />
+      <img :src="img" :alt="title" />
     </div>
     <div class="home-7__text-wrapper">
       <h3 class="home-7__plate-title">{{ title }}</h3>
@@ -26,10 +26,6 @@ export default {
     img: {
       type: String,
       default: '/',
-    },
-    name: {
-      type: String,
-      default: '',
     },
   },
 }

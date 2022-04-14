@@ -1,6 +1,5 @@
 .home {
   height: 100vh;
-  padding-top: vw(198);
   padding-bottom: 0;
 
   @media (max-width: $br1) {
@@ -26,11 +25,11 @@
 }
 
 .home__wrapper {
-  margin-top: vw(305);
-
-  @media (max-width: $br1) {
-    margin-top: 305px;
-  }
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .home__block {
@@ -63,7 +62,7 @@
   }
 
   @media (max-width: $br3) {
-    font-size: 48px;
+    font-size: 42px;
   }
 }
 

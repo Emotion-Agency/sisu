@@ -1,5 +1,8 @@
 .home-3 {
   background-color: var(--grey);
+  @media (max-width: $br1) {
+    overflow: hidden;
+  }
 }
 
 .home-3__text {
@@ -26,6 +29,13 @@
   }
 }
 
+.home-3__wrapper {
+  @media (max-width: $br1) {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+
 .home-3__desc {
   @include med;
   font-size: vw(30);
@@ -40,28 +50,29 @@
   }
 }
 
-.home-3__hover-plates {
-  margin-top: vw(60);
-  margin-bottom: vw(80);
-
-  @media (max-width: $br1) {
-    margin-top: 60px;
-    margin-bottom: 80px;
-  }
-}
-
 .home-3__plates-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   margin: 0 auto;
   gap: vw(20);
+  max-width: 1200px;
+  padding-top: vw(60);
+  padding-bottom: vw(80);
+
+  @media (max-width: $br1) {
+    padding-top: 60px;
+    padding-bottom: 80px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 
   @media (max-width: $br1) {
     gap: 20px;
+    justify-content: flex-start;
   }
 
-  @media (max-width: 1200px) {
+  @media (max-width: $br1) {
     overflow-x: auto;
+    overflow-y: visible;
   }
 }

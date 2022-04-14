@@ -1,13 +1,21 @@
 <template>
-  <li class="home-3__plates-list">
+  <li
+    class="home-3__plates-list"
+    :class="[isActive && 'home-3__plates-list--active']"
+  >
     <div class="home-3__plates-block">
       <h3 class="home-3__plates-title">{{ title }}</h3>
-      <button class="home-3__plates-button">
-        <span class="home-3__text-button">{{ text }}</span>
-      </button>
+      <a
+        :href="buttonLink"
+        target="_blank"
+        rel="noreferer noopener"
+        class="home-3__plates-button"
+      >
+        <span class="home-3__text-button">{{ buttonText }}</span>
+      </a>
     </div>
     <div class="home-3__plates-figure">
-      <img :src="img" :alt="name" />
+      <img :src="img" :alt="title" />
     </div>
   </li>
 </template>
@@ -19,7 +27,11 @@ export default {
       type: String,
       default: '',
     },
-    text: {
+    buttonText: {
+      type: String,
+      default: '',
+    },
+    buttonLink: {
       type: String,
       default: '',
     },
@@ -27,9 +39,9 @@ export default {
       type: String,
       default: '/',
     },
-    name: {
-      type: String,
-      default: '',
+    isActive: {
+      type: Boolean,
+      default: false,
     },
   },
 }

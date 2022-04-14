@@ -1,6 +1,6 @@
 <template>
   <main>
-    <section class="section home">
+    <section class="section section--nm home">
       <div class="home__bg"></div>
       <div class="container home__wrapper">
         <div class="home__block">
@@ -27,7 +27,7 @@
       </div>
     </section>
     <section class="section section--pb home-3">
-      <div class="container home-3__wrapper">
+      <div class="container">
         <div class="home-3__text">
           <h2 class="home-3__title">Unrivalled Custom isability</h2>
           <p class="home-3__desc">
@@ -36,21 +36,23 @@
             interest.
           </p>
         </div>
-        <div class="home-3__hover-plates">
-          <ul class="home-3__plates-wrapper">
-            <hover-plates
-              v-for="plate in 4"
-              :key="plate"
-              img="/images/color-figure.jpg"
-              title="Crypto Newbie"
-              text="info ↗"
-              name="Figure"
-            />
-          </ul>
-        </div>
+      </div>
+      <div class="container home-3__wrapper">
+        <ul class="home-3__plates-wrapper">
+          <hover-plates
+            v-for="plate in plates"
+            :key="plate.title"
+            :img="plate.img"
+            :title="plate.title"
+            :button-text="plate.buttonText"
+            :is-active="plate.isActive"
+          />
+        </ul>
+      </div>
+      <div class="container">
         <img
           class="home-3__result-plate"
-          src="/images/result-plate.jpg"
+          src="/images/result-plate.png"
           alt="Image"
         />
       </div>
@@ -101,17 +103,16 @@
         <h2 class="home-7__title">Get More with SISU</h2>
         <ul class="grid home-7__plates">
           <app-plates
-            v-for="plate in 4"
-            :key="plate"
-            img="/images/color-figure(2).jpg"
-            name="Figure"
-            title="Connect"
-            text="We fetch read-only data related from crypto wallets, exchange and on-chain addresses; you keep full custody of your funds at all times."
+            v-for="plate in getMore"
+            :key="plate.title"
+            :img="plate.img"
+            :title="plate.title"
+            :text="plate.text"
           />
         </ul>
       </div>
     </section>
-    <section class="section grid home-8">
+    <section class="grid home-8">
       <div class="container home-8__wrapper">
         <div class="home-8__block">
           <h2 class="home-8__title">Stay Connected</h2>
@@ -139,5 +140,57 @@ import AppPlates from '~/components/AppPlates.vue'
 
 export default {
   components: { AppButton, HoverPlates, AppPlates },
+  data() {
+    return {
+      plates: [
+        {
+          title: 'Crypto Newbie',
+          buttonText: 'info ↗',
+          img: '/images/plate-1.png',
+          isActive: true,
+        },
+        {
+          title: 'Trader or Investor',
+          buttonText: 'info ↗',
+          img: '/images/plate-2.png',
+          isActive: false,
+        },
+        {
+          title: 'DeFi Power User',
+          buttonText: 'info ↗',
+          img: '/images/plate-3.png',
+          isActive: false,
+        },
+        {
+          title: 'NFT Flipper',
+          buttonText: 'info ↗',
+          img: '/images/plate-4.png',
+          isActive: false,
+        },
+      ],
+      getMore: [
+        {
+          title: 'Connect',
+          text: 'We fetch read-only data related from crypto wallets, exchange and on-chain addresses; you keep full custody of your funds at all times.',
+          img: '/images/get-more/1.png',
+        },
+        {
+          title: 'Personalise',
+          text: 'Complete modularity means that potential dashboard compositions are near limitless. View the performance of your portfolio, your way.',
+          img: '/images/get-more/2.png',
+        },
+        {
+          title: 'Track',
+          text: 'Get accurate and historical performance data for everything from NFTs to vested tokens, futures trades to LP positions.',
+          img: '/images/get-more/3.png',
+        },
+        {
+          title: 'Relax',
+          text: 'Forget using multiple crypto portfolio tracker apps at once to track your digital assets. It’s time to level-up.',
+          img: '/images/get-more/4.png',
+        },
+      ],
+    }
+  },
 }
 </script>

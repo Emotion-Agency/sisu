@@ -11,13 +11,13 @@
   display: flex;
   align-items: center;
   background-color: var(--white);
-  padding: vw(60) vw(98) vw(78) vw(60);
+  padding: vw(60);
   box-shadow: 0px 18px 60px rgba(81, 92, 89, 0.12);
   border-radius: 24px;
 
   @media (max-width: $br1) {
     @include col(1, 6);
-    padding: 60px 98px 78px 60px;
+    padding: 20px;
   }
 
   @media (max-width: $br2) {
@@ -93,7 +93,7 @@
   max-width: vw(512);
 
   @media (max-width: $br1) {
-    margin-left: 60px;
+    margin-left: 20px;
     max-width: 512px;
   }
 
@@ -110,7 +110,7 @@
   letter-spacing: -0.02em;
 
   @media (max-width: $br1) {
-    font-size: 42px;
+    font-size: 32px;
   }
 }
 
@@ -124,7 +124,7 @@
   width: 100%;
 
   @media (max-width: $br1) {
-    font-size: 24px;
-    margin-top: 60px;
+    font-size: 16px;
+    margin-top: 20px;
   }
 }

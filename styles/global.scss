@@ -1,7 +1,7 @@
 * {
   &::selection {
     color: white;
-    background: #ece5df;
+    background: #49d6ba;
   }
 }
 
@@ -17,10 +17,12 @@ body {
   // @include reg;
   height: 100vh;
   height: var(--vh);
-  // overflow: hidden !important;
   position: relative;
   overscroll-behavior-y: none;
   @include smooth-font;
+  @media (min-width: 960px) {
+    overflow: hidden;
+  }
 
   @media (max-width: $br1) {
     font-size: 16px;
