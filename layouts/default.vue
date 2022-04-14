@@ -4,6 +4,7 @@
     <ui-loader />
     <app-header />
     <Nuxt />
+    <app-footer />
   </div>
 </template>
 
@@ -11,9 +12,10 @@
 import AppGrid from '~/components/AppGrid.vue'
 import UiLoader from '~/components/UiLoader.vue'
 import AppHeader from '~/components/AppHeader.vue'
+import AppFooter from '~/components/AppFooter.vue'
 
 export default {
-  components: { AppGrid, UiLoader, AppHeader },
+  components: { AppGrid, UiLoader, AppHeader, AppFooter },
 
   async mounted() {
     const { default: supportsWebP } = await import('supports-webp')

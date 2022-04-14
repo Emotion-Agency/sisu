@@ -36,9 +36,9 @@
             interest.
           </p>
         </div>
-        <div class="home-3__app-plates">
+        <div class="home-3__hover-plates">
           <ul class="home-3__plates-wrapper">
-            <app-plates
+            <hover-plates
               v-for="plate in 4"
               :key="plate"
               img="/images/color-figure.jpg"
@@ -81,19 +81,54 @@
       </div>
     </section>
     <section class="section home-6">
-      <div class="container home-6__wrapper"></div>
+      <div class="container grid home-6__wrapper">
+        <img class="home-6__img" src="/images/home-6.jpg" alt="Image" />
+        <div class="home-6__block">
+          <h2 class="home-6__title">Modular & Adaptive</h2>
+          <p class="home-6__desc">
+            With innovative features such as drag and drop widgets and multiple
+            dashboard creation, SISU offers more functionality than any other
+            crypto portfolio tracker.
+          </p>
+          <app-button class="home-6__btn" text="Create Dashboard" />
+        </div>
+      </div>
     </section>
     <section class="section home-7">
-      <div class="container home-7__wrapper"></div>
+      <div class="container home-7__wrapper">
+        <h2 class="home-7__title">Get More with SISU</h2>
+        <ul class="home-7__plates">
+          <app-plates />
+        </ul>
+      </div>
+    </section>
+    <section class="section grid home-8">
+      <div class="container home-8__wrapper">
+        <div class="home-8__block">
+          <h2 class="home-8__title">Stay Connected</h2>
+          <p class="home-8__desc">
+            Following our social media profiles means that you stay up to date
+            with regular integrations and platform updates.<br />
+            <br />
+            You can also explore SISU’s game changing features and learn how to
+            get the best out of the platform by diving into the SISU knowledge
+            base
+          </p>
+        </div>
+      </div>
+      <div class="home-8__img-wrapper">
+        <img class="home-8__img" src="/images/home-8.jpg" alt="Image" />
+      </div>
     </section>
   </main>
 </template>
 
 <script>
 import AppButton from '~/components/AppButton.vue'
+import HoverPlates from '~/components/HoverPlates.vue'
 import AppPlates from '~/components/AppPlates.vue'
 
 export default {
-  components: { AppButton, AppPlates },
+  components: { AppButton, HoverPlates, AppPlates },
 }
 </script>

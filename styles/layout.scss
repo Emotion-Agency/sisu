@@ -49,7 +49,7 @@
 
 .section {
   padding-top: vw(240);
-  padding-bottom: vw(240);
+  // padding-bottom: vw(240);
 
   &--nm {
     padding-top: 0;
@@ -61,7 +61,7 @@
 
   @media (max-width: $br1) {
     padding-top: 200px;
-    padding-bottom: 200px;
+    // padding-bottom: 200px;
 
     &--pb {
       padding-bottom: 200px;
@@ -70,7 +70,7 @@
 
   @media (max-width: $br3) {
     padding-top: 120px;
-    padding-bottom: 120px;
+    // padding-bottom: 120px;
 
     &--pb {
       padding-bottom: 120px;
