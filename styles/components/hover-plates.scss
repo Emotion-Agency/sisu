@@ -3,6 +3,7 @@
   background-color: var(--white);
   box-shadow: 0px 18px 60px rgba(81, 92, 89, 0.12);
   border-radius: vw(24);
+  border: 2px solid green;
 
   @media (max-width: $br1) {
     padding: 24px 32px;

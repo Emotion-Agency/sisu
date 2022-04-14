@@ -38,6 +38,10 @@
   max-width: vw(632);
 
   @media (max-width: $br1) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     margin-left: 60px;
     max-width: 632px;
   }
