@@ -30,6 +30,8 @@
 }
 
 .home-3__wrapper {
+  z-index: 1;
+
   @media (max-width: $br1) {
     padding-left: 0 !important;
     padding-right: 0 !important;
@@ -53,9 +55,8 @@
 .home-3__plates-wrapper {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  margin: 0 auto;
   gap: vw(20);
-  max-width: 1200px;
+  justify-items: center;
   padding-top: vw(60);
   padding-bottom: vw(80);
 
