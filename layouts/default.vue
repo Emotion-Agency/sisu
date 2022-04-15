@@ -38,7 +38,7 @@ export default {
     window.ss = new SmoothScroll({
       el: document.documentElement,
       mobile: false,
-      breakpoint: 960,
+      breakpoint: 1060,
       passive: false,
       isFixed: false,
       friction: 0.07,

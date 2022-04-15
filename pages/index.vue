@@ -11,8 +11,8 @@
             Your Dashboard.
           </h1>
           <p class="home__desc">
-            A crypto portfolio tracker designed for a new generation of digital
-            assets.
+            A crypto portfolio tracker designed<br />for a new generation of
+            digital assets.
           </p>
         </div>
       </div>
@@ -25,9 +25,9 @@
         <div class="home-2__block">
           <h2 class="home-2__title">Everything In One Place</h2>
           <p class="home-2__desc">
-            Track the performance of your crypto assets across a wide variety of
-            popular exchanges, blockchain networks and DeFi protocols with just
-            one app.
+            Track the performance of your crypto assets across a&nbsp;wide
+            variety of popular exchanges, blockchain networks and DeFi protocols
+            with just one app.
           </p>
           <app-button class="home-2__btn" text="Quick Start" />
         </div>
@@ -156,25 +156,25 @@ export default {
     return {
       plates: [
         {
-          title: 'Crypto Newbie',
+          title: 'Crypto<br/>Newbie',
           buttonText: 'info ↗',
           img: '/images/plate-1.png',
           isActive: true,
         },
         {
-          title: 'Trader or Investor',
+          title: 'Trader or<br/>Investor',
           buttonText: 'info ↗',
           img: '/images/plate-2.png',
           isActive: false,
         },
         {
-          title: 'DeFi Power User',
+          title: 'DeFi<br/>Power&nbsp;User',
           buttonText: 'info ↗',
           img: '/images/plate-3.png',
           isActive: false,
         },
         {
-          title: 'NFT Flipper',
+          title: 'NFT<br/>Flipper',
           buttonText: 'info ↗',
           img: '/images/plate-4.png',
           isActive: false,

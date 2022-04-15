@@ -9,7 +9,7 @@
   display: flex;
   flex-direction: column;
   text-align: center;
-  max-width: vw(960);
+  max-width: 52vw;
   margin: 0 auto;
 
   @media (max-width: $br1) {
@@ -60,20 +60,23 @@
   padding-top: vw(60);
   padding-bottom: vw(80);
 
+  @media (min-width: $br1) {
+    max-width: vw(1200);
+    width: fit-content;
+    margin: 0 auto;
+  }
+
   @media (max-width: $br1) {
     padding-top: 60px;
     padding-bottom: 80px;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
-  @media (max-width: $br1) {
+    padding-left: $g-sm;
+    padding-right: $g-sm;
     gap: 20px;
-    justify-content: flex-start;
-  }
-
-  @media (max-width: $br1) {
     overflow-x: auto;
     overflow-y: visible;
+  }
+  @media (max-width: $br4) {
+    padding-left: $g-s;
+    padding-right: $g-s;
   }
 }
