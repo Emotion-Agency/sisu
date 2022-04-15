@@ -57,17 +57,13 @@
   width: vw(240);
   height: vw(48);
   border-radius: vw(16);
-  background: linear-gradient(
-      90deg,
+  background: linear-gradient(90deg,
       rgba(115, 212, 188, 0.72) 0%,
-      rgba(190, 236, 226, 0.72) 100%
-    ),
+      rgba(190, 236, 226, 0.72) 100%),
     linear-gradient(0deg, #49d6ba, #49d6ba),
-    linear-gradient(
-      117.17deg,
+    linear-gradient(117.17deg,
       rgba(73, 214, 186, 0.24) 0%,
-      rgba(255, 182, 10, 0.24) 100%
-    );
+      rgba(255, 182, 10, 0.24) 100%);
   box-shadow: 0px 3px 6px rgba(110, 208, 152, 0.36);
   transition: filter 0.3s ease;
 
@@ -101,5 +97,39 @@
 
   @media (max-width: $br4) {
     font-size: 16px;
+  }
+}
+
+.header__social {
+  display: flex;
+}
+
+.header__img-list {
+  display: block;
+  width: vw(24);
+  height: vw(24);
+  margin-right: 36px;
+
+  svg path {
+    transition: fill 0.3s ease;
+  }
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+
+  @media (max-width: $br1) {
+    width: 24px;
+    height: 24px;
+  }
+
+  @media (min-width: $br2) {
+    &:hover {
+      svg {
+        path {
+          fill: white;
+        }
+      }
+    }
   }
 }

@@ -7,13 +7,26 @@
   }
 }
 
+.signup__blur {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 50%;
+  z-index: -1;
+  overflow: hidden;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.48), rgba(0, 0, 0, 0.48)), rgba(255, 255, 255, 0.48);
+  opacity: 0.48;
+  backdrop-filter: blur(90px);
+}
+
 .signup__bg {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1;
+  z-index: -2;
   overflow: hidden;
 
   video {

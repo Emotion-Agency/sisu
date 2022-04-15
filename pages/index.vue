@@ -233,12 +233,7 @@ export default {
   },
   methods: {
     onHover(title) {
-      this.plates = this.plates.map(plate => {
-        if (plate.title === title) {
-          return { ...plate, isActive: true }
-        }
-        return { ...plate, isActive: false }
-      })
+      this.plates = this.plates.map(plate => ({ ...plate, isActive: title === plate.title }))
     },
   },
 }

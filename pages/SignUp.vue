@@ -2,10 +2,10 @@
   <div class="signup-page">
     <app-header :is-default="false" />
     <section class="section section--nm signup">
-      
       <div class="signup__bg">
         <app-video link="/videos/1" />
       </div>
+      <div class="signup__blur"></div>
       <div class="container signup__wrapper">
         <div class="signup__text-block">
           <h1 class="signup__title">
