@@ -1,7 +1,17 @@
 .footer {
   padding-top: vw(90);
   padding-bottom: vw(120);
-  background: linear-gradient(90deg, rgba(115, 212, 188, 0.72) 0%, rgba(190, 236, 226, 0.72) 100%), linear-gradient(0deg, #49D6BA, #49D6BA), linear-gradient(117.17deg, rgba(73, 214, 186, 0.24) 0%, rgba(255, 182, 10, 0.24) 100%);
+  background: linear-gradient(
+      90deg,
+      rgba(115, 212, 188, 0.72) 0%,
+      rgba(190, 236, 226, 0.72) 100%
+    ),
+    linear-gradient(0deg, #49d6ba, #49d6ba),
+    linear-gradient(
+      117.17deg,
+      rgba(73, 214, 186, 0.24) 0%,
+      rgba(255, 182, 10, 0.24) 100%
+    );
 
   @media (max-width: $br1) {
     padding-top: 90px;
@@ -68,9 +78,31 @@
   font-size: vw(18);
   line-height: 130%;
   color: var(--charcoal);
+  position: relative;
+  overflow: hidden;
+  display: block;
 
   @media (max-width: $br1) {
     font-size: 18px;
+  }
+  &::after {
+    content: '';
+    display: block;
+    width: 0%;
+    height: 1px;
+    background-color: var(--charcoal);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: auto;
+    transition: width 0.3s ease;
+  }
+  &:hover {
+    &::after {
+      width: 100%;
+      left: 0;
+      right: auto;
+    }
   }
 }
 
@@ -86,6 +118,18 @@
 .footer__img-list {
   margin-top: vw(90);
   margin-right: vw(40);
+  svg path {
+    transition: fill 0.3s ease;
+  }
+  @media (min-width: $br2) {
+    &:hover {
+      svg {
+        path {
+          fill: white;
+        }
+      }
+    }
+  }
 
   &:last-of-type {
     margin-right: 0;

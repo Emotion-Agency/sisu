@@ -6,11 +6,21 @@
   width: vw(360);
   height: vw(90);
   background-color: transparent;
+  transition: transform 0.3s ease;
 
   @media (max-width: $br1) {
     width: 360px;
     height: 90px;
     max-width: 100%;
+  }
+
+  @media (min-width: $br2) {
+    &:hover {
+      transform: scale(1.02);
+      .btn__bg {
+        filter: blur(0px);
+      }
+    }
   }
 }
 
@@ -29,6 +39,7 @@
   );
   box-shadow: 0px 6px 24px #cccccc;
   filter: blur(12px);
+  transition: filter 0.3s ease;
 
   @media (max-width: $br1) {
     border-radius: 76px;
