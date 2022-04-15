@@ -1,0 +1,184 @@
+.signup {
+  height: 100vh;
+  padding-bottom: 0;
+
+  @media (max-width: $br1) {
+    padding-top: 132px;
+  }
+}
+
+.signup__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+
+  video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+
+    @media (max-width: 1250px) {
+      object-position: 58% 50%;
+    }
+
+    @media (max-width: $br1) {
+      object-position: 68% 50%;
+    }
+
+    @media (max-width: $br3) {
+      object-position: 70% 50%;
+    }
+
+    @media (max-width: 500px) {
+      object-position: 67% 50%;
+    }
+
+    @media (max-width: $br4) {
+      object-position: 68% 50%;
+    }
+  }
+}
+
+.signup__wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.signup__text-block {
+  margin-left: vw(60);
+  max-width: vw(632);
+
+  @media (max-width: $br1) {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 60px;
+    max-width: 632px;
+  }
+
+  @media (max-width: $br3) {
+    margin-left: 0;
+  }
+}
+
+.signup__input-block {
+  margin-left: vw(60);
+  max-width: vw(632);
+  margin-top: vw(60);
+
+  @media (max-width: $br1) {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 60px;
+    margin-top: 60px;
+    max-width: 632px;
+  }
+
+  @media (max-width: $br3) {
+    margin-left: 0;
+  }
+}
+
+.signup__title {
+  @include black;
+  font-size: vw(60);
+  line-height: 130%;
+  letter-spacing: -0.02em;
+  color: var(--black);
+
+  @media (max-width: $br1) {
+    font-size: 60px;
+  }
+
+  @media (max-width: $br3) {
+    font-size: 42px;
+  }
+}
+
+.signup__desc {
+  @include med;
+  font-size: vw(30);
+  line-height: 130%;
+  letter-spacing: -0.02em;
+  color: var(--charcoal);
+  margin-top: vw(20);
+
+  @media (max-width: $br1) {
+    font-size: 30px;
+    margin-top: 20px;
+  }
+
+  @media (max-width: $br3) {
+    font-size: 20px;
+  }
+}
+
+
+.signup__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: vw(180);
+  height: vw(72);
+  background-color: transparent;
+  transition: transform 0.3s ease;
+  margin-top: vw(20);
+
+  @media (max-width: $br1) {
+    width: 180px;
+    height: 72px;
+    max-width: 100%;
+    margin-top: 20px;
+  }
+
+  @media (min-width: $br2) {
+    &:hover {
+      transform: scale(1.02);
+
+      .signup__btn-bg {
+        filter: blur(0px);
+      }
+    }
+  }
+
+  @media (max-width: $br4) {
+    width: 100%;
+  }
+}
+
+.signup__btn-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  border-radius: 16px;
+  background: linear-gradient(117.17deg,
+      rgba(73, 214, 186, 0.48) 0%,
+      rgba(255, 182, 10, 0.48) 100%);
+  box-shadow: 0px 6px 24px #cccccc;
+  filter: blur(12px);
+  transition: filter 0.3s ease;
+}
+
+.signup__text {
+  @include bold;
+  position: relative;
+  font-size: vw(30);
+  line-height: 80%;
+  color: var(--charcoal);
+
+  @media (max-width: $br1) {
+    font-size: 18px;
+  }
+}

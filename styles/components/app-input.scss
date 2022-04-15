@@ -1,0 +1,70 @@
+.input-wrapper {
+  position: relative;
+  max-width: vw(560);
+  border-radius: 16px;
+  filter: drop-shadow(0px 3px 9px rgba(0, 0, 0, 0.25));
+
+  @media (max-width: $br1) {
+    max-width: 560px;
+  }
+
+  @media (max-width: $br3) {
+    max-width: 360px;
+  }
+
+  @media (max-width: $br4) {
+    max-width: 100%;
+  }
+}
+
+.input {
+  @include med;
+  border-radius: 16px;
+  background-color: var(--white);
+  color: var(--black);
+  width: 100%;
+  line-height: 150%;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-size: vw(24);
+  letter-spacing: -0.02em;
+  height: vw(72);
+
+  &::selection {
+    background-color: var(--b-grey);
+    color: var(--white);
+  }
+
+  &:focus {
+    background-color: var(--b-grey);
+  }
+
+  &::placeholder {
+    color: var(--charcoal);
+  }
+
+  @media (max-width: $br1) {
+    height: 72px;
+    font-size: 24px;
+  }
+}
+
+.form__input-error {
+  color: var(--red);
+  font-size: 12px;
+}
+
+//Reset autofill styles
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: var(--white);
+  box-shadow: 0 0 0px 1000px rgba(0, 0, 0, 0.01) inset;
+  transition: background-color 5000s ease-in-out 0s;
+}

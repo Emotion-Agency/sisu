@@ -2,20 +2,15 @@
   <div id="app">
     <app-grid />
     <ui-loader />
-    <app-header />
     <Nuxt />
-    <app-footer />
   </div>
 </template>
 
 <script>
 import AppGrid from '~/components/AppGrid.vue'
 import UiLoader from '~/components/UiLoader.vue'
-import AppHeader from '~/components/AppHeader.vue'
-import AppFooter from '~/components/AppFooter.vue'
-
 export default {
-  components: { AppGrid, UiLoader, AppHeader, AppFooter },
+  components: { AppGrid, UiLoader },
 
   async mounted() {
     const { default: supportsWebP } = await import('supports-webp')
