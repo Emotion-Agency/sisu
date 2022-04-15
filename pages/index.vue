@@ -80,7 +80,7 @@
         </div>
       </div>
     </section>
-    <section class="home-5">
+    <section class="section section--nm home-5">
       <div class="container grid home-5__wrapper">
         <h3 class="home-5__title">
           “SISU enables traders and investors of all backgrounds to track their
@@ -123,7 +123,7 @@
         </ul>
       </div>
     </section>
-    <section class="grid home-8">
+    <section class="section section--nm grid home-8">
       <div class="container home-8__wrapper">
         <div class="home-8__block">
           <h2 class="home-8__title">Stay Connected</h2>
@@ -137,8 +137,8 @@
           </p>
         </div>
       </div>
-      <div class="home-8__img-wrapper">
-        <img class="home-8__img" src="/images/home-8.jpg" alt="Image" />
+      <div class="home-8__video-wrapper">
+        <app-video link="/videos/14" />
       </div>
     </section>
   </main>
