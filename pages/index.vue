@@ -163,7 +163,7 @@ export default {
           isActive: true,
         },
         {
-          title: 'Trader or<br/>Investor',
+          title: 'Trader<br/> or Investor',
           buttonText: 'info ↗',
           img: '/images/plate-2.png',
           isActive: false,

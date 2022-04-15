@@ -1,5 +1,9 @@
 .home-8 {
   align-items: center;
+
+  @media (max-width: $br2) {
+    padding-top: 60px;
+  }
 }
 
 .home-8__wrapper {
