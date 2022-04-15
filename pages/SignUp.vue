@@ -1,7 +1,8 @@
 <template>
   <div class="signup-page">
-    <app-header />
+    <app-header :is-default="false" />
     <section class="section section--nm signup">
+      
       <div class="signup__bg">
         <app-video link="/videos/1" />
       </div>

@@ -16,15 +16,24 @@
           />
         </svg>
       </a>
-      <button class="header__btn">
+      <button v-if="isDefault" class="header__btn">
         <span class="header__btn-text">Get Started</span>
       </button>
+      <div v-else>
+        
+      </div>
     </div>
   </header>
 </template>
 
 <script>
 export default {
+  props: {
+    isDefault: {
+      type: Boolean,
+      default: true,
+    },
+  },
   async mounted() {
     const { default: NavbarPos } = await import('~/scripts/utils/navbarPos')
     this.navbarPos = new NavbarPos()
