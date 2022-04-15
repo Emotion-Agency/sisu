@@ -81,6 +81,7 @@
       </div>
     </section>
     <section class="section section--nm home-5">
+      <div class="home-5__bg"></div>
       <div class="container grid home-5__wrapper">
         <h3 class="home-5__title">
           “SISU enables traders and investors of all backgrounds to track their
