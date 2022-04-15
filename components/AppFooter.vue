@@ -45,7 +45,11 @@
       </div>
       <ul class="footer__img-block">
         <li class="social-wrapper footer__img-list">
-          <a href="#" class="footer__twitter-wrapper">
+          <a
+            target="_blank"
+            href="https://twitter.com/SISUTools "
+            class="footer__twitter-wrapper"
+          >
             <svg
               class="social-img footer__twitter"
               width="24"
@@ -62,7 +66,11 @@
           </a>
         </li>
         <li class="social-wrapper footer__img-list">
-          <a href="#" class="footer__telegram-wrapper">
+          <a
+            target="_blank"
+            href="https://t.me/sisucommunity "
+            class="footer__telegram-wrapper"
+          >
             <svg
               class="social-img footer__telegram"
               width="24"

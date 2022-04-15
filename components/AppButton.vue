@@ -1,5 +1,5 @@
 <template>
-  <button class="btn">
+  <a :href="link" class="btn">
     <span class="btn__bg"></span>
     <span class="btn__text">{{ text }}</span>
     <span class="btn__arrow">
@@ -17,7 +17,7 @@
         />
       </svg>
     </span>
-  </button>
+  </a>
 </template>
 
 <script>
@@ -27,6 +27,10 @@ export default {
       type: String,
       default: '',
     },
+    link: {
+      type: String,
+      default: '',
+    }
   },
 }
 </script>

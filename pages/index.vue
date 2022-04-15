@@ -82,7 +82,12 @@
               within your Dashboards, giving you a bird’s eye view of your
               portfolio’s overall performance.
             </p>
-            <app-button class="home-4__btn" text="Learn More" />
+            <app-button
+              target="_blank"
+              link="https://help.sisu.tools/en/articles/5916876-what-is-sisu"
+              class="home-4__btn"
+              text="Learn More"
+            />
           </div>
         </div>
       </section>
@@ -162,7 +167,14 @@ import AppFooter from '~/components/AppFooter.vue'
 import AppHeader from '~/components/AppHeader.vue'
 
 export default {
-  components: { AppButton, HoverPlates, AppPlates, AppVideo, AppFooter, AppHeader },
+  components: {
+    AppButton,
+    HoverPlates,
+    AppPlates,
+    AppVideo,
+    AppFooter,
+    AppHeader,
+  },
   data() {
     return {
       plates: [
