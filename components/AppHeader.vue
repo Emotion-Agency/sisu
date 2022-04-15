@@ -22,3 +22,13 @@
     </div>
   </header>
 </template>
+
+<script>
+export default {
+  async mounted() {
+    const { default: NavbarPos } = await import('~/scripts/utils/navbarPos')
+    this.navbarPos = new NavbarPos()
+    this.navbarPos.init()
+  },
+}
+</script>

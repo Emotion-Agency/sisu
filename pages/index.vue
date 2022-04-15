@@ -53,14 +53,18 @@
             :title="plate.title"
             :button-text="plate.buttonText"
             :is-active="plate.isActive"
+            @hovered="onHover"
           />
         </ul>
       </div>
       <div class="container">
         <img
+          v-for="plate in plates"
+          :key="plate.title"
           class="home-3__result-plate"
-          src="/images/result-plate.png"
-          alt="Image"
+          :class="[plate.isActive && 'home-3__result-plate--active']"
+          :src="plate.relativeImg"
+          :alt="plate.title"
         />
       </div>
     </section>
@@ -159,25 +163,29 @@ export default {
         {
           title: 'Crypto<br/>Newbie',
           buttonText: 'info ↗',
-          img: '/images/plate-1.png',
+          img: '/images/plates/plate-1.png',
+          relativeImg: '/images/dashboards/1.png',
           isActive: true,
         },
         {
           title: 'Trader<br/> or Investor',
           buttonText: 'info ↗',
-          img: '/images/plate-2.png',
+          img: '/images/plates/plate-2.png',
+          relativeImg: '/images/dashboards/2.png',
           isActive: false,
         },
         {
           title: 'DeFi<br/>Power&nbsp;User',
           buttonText: 'info ↗',
-          img: '/images/plate-3.png',
+          img: '/images/plates/plate-3.png',
+          relativeImg: '/images/dashboards/3.png',
           isActive: false,
         },
         {
           title: 'NFT<br/>Flipper',
           buttonText: 'info ↗',
-          img: '/images/plate-4.png',
+          img: '/images/plates/plate-4.png',
+          relativeImg: '/images/dashboards/4.png',
           isActive: false,
         },
       ],
@@ -204,6 +212,16 @@ export default {
         },
       ],
     }
+  },
+  methods: {
+    onHover(title) {
+      this.plates = this.plates.map(plate => {
+        if (plate.title === title) {
+          return { ...plate, isActive: true }
+        }
+        return { ...plate, isActive: false }
+      })
+    },
   },
 }
 </script>
