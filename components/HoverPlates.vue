@@ -2,9 +2,11 @@
   <li
     class="home-3__plates-list"
     :class="[isActive && 'home-3__plates-list--active']"
+    @mouseenter="onMouseEnter"
+    @touchstart="onMouseEnter"
   >
     <div class="home-3__plates-block">
-      <h3 class="home-3__plates-title">{{ title }}</h3>
+      <h3 class="home-3__plates-title" v-html="title" />
       <a
         :href="buttonLink"
         target="_blank"
@@ -42,6 +44,11 @@ export default {
     isActive: {
       type: Boolean,
       default: false,
+    },
+  },
+  methods: {
+    onMouseEnter() {
+      this.$emit('hovered', this.title)
     },
   },
 }

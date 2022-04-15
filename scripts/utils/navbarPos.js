@@ -56,7 +56,7 @@ export default class NavbarPos {
   }
 
   get isFixed() {
-    return window.smoothScroll ? window.smoothScroll.isFixed : false
+    return window.ss ? window.ss.isFixed : false
   }
 
   addVisibility() {
@@ -71,14 +71,10 @@ export default class NavbarPos {
 
   addBg() {
     this.$navbar.classList.add('add-bg')
-    // this.$navbar.classList.remove('navbar--black')
-    // this.$navbar.classList.add('navbar--bg')
   }
 
   removeBg() {
     this.$navbar.classList.remove('add-bg')
-    // this.$navbar.classList.remove('navbar--bg')
-    // this.$navbar.classList.add('navbar--black')
   }
 
   destroy() {

@@ -11,8 +11,8 @@
             Your Dashboard.
           </h1>
           <p class="home__desc">
-            A crypto portfolio tracker designed for a new generation of digital
-            assets.
+            A crypto portfolio tracker designed<br />for a new generation of
+            digital assets.
           </p>
         </div>
       </div>
@@ -25,9 +25,9 @@
         <div class="home-2__block">
           <h2 class="home-2__title">Everything In One Place</h2>
           <p class="home-2__desc">
-            Track the performance of your crypto assets across a wide variety of
-            popular exchanges, blockchain networks and DeFi protocols with just
-            one app.
+            Track the performance of your crypto assets across a&nbsp;wide
+            variety of popular exchanges, blockchain networks and DeFi protocols
+            with just one app.
           </p>
           <app-button class="home-2__btn" text="Quick Start" />
         </div>
@@ -53,14 +53,18 @@
             :title="plate.title"
             :button-text="plate.buttonText"
             :is-active="plate.isActive"
+            @hovered="onHover"
           />
         </ul>
       </div>
       <div class="container">
         <img
+          v-for="plate in plates"
+          :key="plate.title"
           class="home-3__result-plate"
-          src="/images/result-plate.png"
-          alt="Image"
+          :class="[plate.isActive && 'home-3__result-plate--active']"
+          :src="plate.relativeImg"
+          :alt="plate.title"
         />
       </div>
     </section>
@@ -80,7 +84,8 @@
         </div>
       </div>
     </section>
-    <section class="home-5">
+    <section class="section section--nm home-5">
+      <div class="home-5__bg"></div>
       <div class="container grid home-5__wrapper">
         <h3 class="home-5__title">
           “SISU enables traders and investors of all backgrounds to track their
@@ -123,7 +128,7 @@
         </ul>
       </div>
     </section>
-    <section class="grid home-8">
+    <section class="section section--nm grid home-8">
       <div class="container home-8__wrapper">
         <div class="home-8__block">
           <h2 class="home-8__title">Stay Connected</h2>
@@ -137,8 +142,8 @@
           </p>
         </div>
       </div>
-      <div class="home-8__img-wrapper">
-        <img class="home-8__img" src="/images/home-8.jpg" alt="Image" />
+      <div class="home-8__video-wrapper">
+        <app-video link="/videos/14" />
       </div>
     </section>
   </main>
@@ -156,27 +161,31 @@ export default {
     return {
       plates: [
         {
-          title: 'Crypto Newbie',
+          title: 'Crypto<br/>Newbie',
           buttonText: 'info ↗',
-          img: '/images/plate-1.png',
+          img: '/images/plates/plate-1.png',
+          relativeImg: '/images/dashboards/1.png',
           isActive: true,
         },
         {
-          title: 'Trader or Investor',
+          title: 'Trader<br/> or Investor',
           buttonText: 'info ↗',
-          img: '/images/plate-2.png',
+          img: '/images/plates/plate-2.png',
+          relativeImg: '/images/dashboards/2.png',
           isActive: false,
         },
         {
-          title: 'DeFi Power User',
+          title: 'DeFi<br/>Power&nbsp;User',
           buttonText: 'info ↗',
-          img: '/images/plate-3.png',
+          img: '/images/plates/plate-3.png',
+          relativeImg: '/images/dashboards/3.png',
           isActive: false,
         },
         {
-          title: 'NFT Flipper',
+          title: 'NFT<br/>Flipper',
           buttonText: 'info ↗',
-          img: '/images/plate-4.png',
+          img: '/images/plates/plate-4.png',
+          relativeImg: '/images/dashboards/4.png',
           isActive: false,
         },
       ],
@@ -203,6 +212,16 @@ export default {
         },
       ],
     }
+  },
+  methods: {
+    onHover(title) {
+      this.plates = this.plates.map(plate => {
+        if (plate.title === title) {
+          return { ...plate, isActive: true }
+        }
+        return { ...plate, isActive: false }
+      })
+    },
   },
 }
 </script>

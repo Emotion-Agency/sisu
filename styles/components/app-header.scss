@@ -69,6 +69,13 @@
       rgba(255, 182, 10, 0.24) 100%
     );
   box-shadow: 0px 3px 6px rgba(110, 208, 152, 0.36);
+  transition: filter 0.3s ease;
+
+  @media (min-width: $br2) {
+    &:hover {
+      filter: brightness(1.1);
+    }
+  }
 
   @media (max-width: $br1) {
     width: 240px;

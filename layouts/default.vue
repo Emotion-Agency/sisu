@@ -38,7 +38,7 @@ export default {
     window.ss = new SmoothScroll({
       el: document.documentElement,
       mobile: false,
-      breakpoint: 960,
+      breakpoint: 1060,
       passive: false,
       isFixed: false,
       friction: 0.07,
@@ -47,10 +47,6 @@ export default {
       useKeyboard: false,
       raf,
     })
-
-    const { default: NavbarPos } = await import('~/scripts/utils/navbarPos')
-    this.navbarPos = new NavbarPos()
-    this.navbarPos.init()
   },
 }
 </script>
