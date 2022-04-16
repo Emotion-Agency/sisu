@@ -101,7 +101,9 @@
             customisable.”
           </h3>
           <p class="home-5__desc">
-            Etiënne vantKruys <br /><span class="home-5__desc-med">- TRGC</span>
+            Alexander Opeagbe <br /><span class="home-5__desc-med"
+              >- Dominance Ventures</span
+            >
           </p>
         </div>
       </section>
@@ -145,7 +147,7 @@
               <br />
               You can also explore SISU’s game changing features and learn how
               to get the best out of the platform by diving into the SISU
-              knowledge base
+              knowledge base.
             </p>
           </div>
         </div>
@@ -165,6 +167,7 @@ import AppPlates from '~/components/AppPlates.vue'
 import AppVideo from '~/components/AppVideo.vue'
 import AppFooter from '~/components/AppFooter.vue'
 import AppHeader from '~/components/AppHeader.vue'
+import transition from '~/mixins/transition'
 
 export default {
   components: {
@@ -175,6 +178,7 @@ export default {
     AppFooter,
     AppHeader,
   },
+  mixins: [transition],
   data() {
     return {
       plates: [
@@ -233,7 +237,10 @@ export default {
   },
   methods: {
     onHover(title) {
-      this.plates = this.plates.map(plate => ({ ...plate, isActive: title === plate.title }))
+      this.plates = this.plates.map(plate => ({
+        ...plate,
+        isActive: title === plate.title,
+      }))
     },
   },
 }

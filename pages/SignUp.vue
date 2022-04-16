@@ -17,20 +17,27 @@
             be amongst the first to use SISU.
           </p>
         </div>
-        <div class="signup__input-block">
+        <form novalidate class="signup__input-block" @submit.prevent="onSubmit">
           <app-input
-            id="password"
-            ref="password"
+            v-for="input in form.inputs"
+            :id="input.id"
+            ref="inputs"
+            :key="input.name"
             class="form__input-wrapper"
-            type="text"
-            placeholder="Email"
-            :required="true"
+            :type="input.type"
+            :name="input.name"
+            :required="input.required"
+            :label="input.label"
+            :placeholder="input.label"
+            :validation="input.validation"
+            :validation-text="input.validationText"
+            @inputValue="onInputValue"
           />
           <button class="signup__btn">
             <span class="signup__btn-bg"></span>
             <span class="signup__text">Join!</span>
           </button>
-        </div>
+        </form>
       </div>
     </section>
   </div>
@@ -40,8 +47,84 @@
 import AppVideo from '~/components/AppVideo.vue'
 import AppInput from '~/components/AppInput.vue'
 import AppHeader from '~/components/AppHeader.vue'
+import transition from '~/mixins/transition'
 
 export default {
   components: { AppVideo, AppInput, AppHeader },
+  mixins: [transition],
+
+  data() {
+    return {
+      form: {
+        hasErrors: true,
+        inputs: [
+          {
+            required: true,
+            id: 'email',
+            name: 'Email',
+            label: 'Email',
+            type: 'email',
+            validation: 'email',
+            validationText: 'incorrect email',
+            error: true,
+            value: '',
+          },
+        ],
+      },
+    }
+  },
+
+  methods: {
+    onInputValue(data) {
+      const idx = this.form.inputs.findIndex(el => el.id === data.id)
+      this.form.inputs[idx].value = data.value
+      this.form.inputs[idx].error = data.error
+    },
+    async onSubmit() {
+      const inputs = this.form.inputs
+      const isError = inputs.find(el => el.error)
+
+      if (isError) {
+        this.emmitError()
+        return
+      }
+
+      console.log(this.form.inputs[0].value)
+
+      const formData = new FormData()
+      inputs.forEach(el => {
+        formData.append(el.name, el.value)
+      })
+
+      try {
+        await this.$store.commit('app/setLoading', true)
+        // await fetch(URL, {
+        //   method: 'POST',
+        //   body: formData,
+        //   mode: 'no-cors',
+        // })
+        this.resetForm()
+      } catch (error) {
+        console.log(error.message)
+        this.error = true
+      } finally {
+        setTimeout(() => {
+          this.$store.commit('app/setLoading', false)
+        }, 400)
+      }
+    },
+    emmitError() {
+      this.$refs.inputs.forEach(input => input.throwError())
+    },
+    resetForm() {
+      this.form.inputs?.forEach(inp => {
+        inp.type === 'email' && (inp.error = true)
+        inp.value = ''
+      })
+
+      this.$refs.inputs.forEach(input => input.reset())
+      this.error = false
+    },
+  },
 }
 </script>

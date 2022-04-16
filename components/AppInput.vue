@@ -3,6 +3,7 @@
     <div class="input-wrapper">
       <input
         :id="id"
+        ref="input"
         class="input form__input"
         :class="[focus && 'js-focus', error && 'js-error']"
         :type="type"

@@ -1,7 +1,7 @@
 <template>
   <header class="header navbar">
     <div class="container header__wrapper">
-      <a href="#" class="header__logo">
+      <nuxt-link to="/" class="header__logo">
         <svg
           class="header__logo-svg"
           width="60"
@@ -15,10 +15,10 @@
             fill="#333333"
           />
         </svg>
-      </a>
-      <button v-if="isDefault" class="header__btn">
+      </nuxt-link>
+      <nuxt-link v-if="isDefault" to="/signup/" class="header__btn">
         <span class="header__btn-text">Get Started</span>
-      </button>
+      </nuxt-link>
       <ul v-else class="header__social">
         <li class="header__img-list">
           <a

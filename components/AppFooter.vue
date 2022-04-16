@@ -88,7 +88,7 @@
             </svg>
           </a>
         </li>
-        <li class="social-wrapper footer__img-list">
+        <!-- <li class="social-wrapper footer__img-list">
           <a href="#" class="footer__discord-wrapper">
             <svg
               class="social-img footer__discord"
@@ -104,8 +104,8 @@
               />
             </svg>
           </a>
-        </li>
-        <li class="social-wrapper footer__img-list">
+        </li> -->
+        <!-- <li class="social-wrapper footer__img-list">
           <a href="#" class="footer__youtube-wrapper">
             <svg
               class="social-img footer__youtube"
@@ -121,7 +121,7 @@
               />
             </svg>
           </a>
-        </li>
+        </li> -->
       </ul>
     </div>
   </footer>
