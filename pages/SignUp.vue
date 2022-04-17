@@ -49,6 +49,8 @@ import AppInput from '~/components/AppInput.vue'
 import AppHeader from '~/components/AppHeader.vue'
 import transition from '~/mixins/transition'
 
+const URL = 'https://sheetdb.io/api/v1/f70cz05l9ntq9'
+
 export default {
   components: { AppVideo, AppInput, AppHeader },
   mixins: [transition],
@@ -61,7 +63,7 @@ export default {
           {
             required: true,
             id: 'email',
-            name: 'Email',
+            name: 'data[Email]',
             label: 'Email',
             type: 'email',
             validation: 'email',
@@ -89,8 +91,6 @@ export default {
         return
       }
 
-      console.log(this.form.inputs[0].value)
-
       const formData = new FormData()
       inputs.forEach(el => {
         formData.append(el.name, el.value)
@@ -98,11 +98,18 @@ export default {
 
       try {
         await this.$store.commit('app/setLoading', true)
-        // await fetch(URL, {
-        //   method: 'POST',
-        //   body: formData,
-        //   mode: 'no-cors',
-        // })
+        await fetch(URL, {
+          method: 'POST',
+          body: formData,
+          mode: 'no-cors',
+        })
+        this.$swal({
+          title: 'Success!',
+          text: 'Your email has been successfully registered',
+          icon: 'success',
+          confirmButtonText: 'Cool',
+          confirmButtonColor: '#49D6BA',
+        })
         this.resetForm()
       } catch (error) {
         console.log(error.message)

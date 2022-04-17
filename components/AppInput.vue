@@ -4,6 +4,7 @@
       <input
         :id="id"
         ref="input"
+        :name="name"
         class="input form__input"
         :class="[focus && 'js-focus', error && 'js-error']"
         :type="type"
@@ -24,6 +25,10 @@
 import validator from '~/scripts/utils/Validation'
 export default {
   props: {
+    name: {
+      type: String,
+      default: '',
+    },
     id: {
       type: String,
       default: '',
