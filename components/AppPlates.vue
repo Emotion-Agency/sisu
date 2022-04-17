@@ -28,5 +28,13 @@ export default {
       default: '/',
     },
   },
+  mounted() {
+    setTimeout(async () => {
+      const { OnScrollAppereance } = await import(
+        '~/scripts/OnScrollAppereance'
+      )
+      new OnScrollAppereance(this.$el)
+    }, 1000)
+  },
 }
 </script>

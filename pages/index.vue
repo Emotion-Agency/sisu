@@ -236,11 +236,6 @@ export default {
     }
   },
 
-  async mounted() {
-    const { OnScrollAppereance } = await import('~/scripts/OnScrollAppereance')
-
-    new OnScrollAppereance(document.querySelectorAll('.home-7__plates-list'))
-  },
   methods: {
     onHover(title) {
       this.plates = this.plates.map(plate => ({
