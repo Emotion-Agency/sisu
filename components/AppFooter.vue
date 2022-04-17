@@ -2,7 +2,7 @@
   <footer class="footer">
     <div class="container footer__nav">
       <div class="footer__links-block">
-        <a href="#" class="footer__logo-wrapper">
+        <nuxt-link to="/" class="footer__logo-wrapper">
           <svg
             class="footer__logo"
             width="60"
@@ -16,7 +16,7 @@
               fill="#333333"
             />
           </svg>
-        </a>
+        </nuxt-link>
         <ul class="footer__links">
           <li class="footer__list">
             <nuxt-link to="/" class="footer__nav-text">
@@ -88,7 +88,7 @@
             </svg>
           </a>
         </li>
-        <li class="social-wrapper footer__img-list">
+        <!-- <li class="social-wrapper footer__img-list">
           <a href="#" class="footer__discord-wrapper">
             <svg
               class="social-img footer__discord"
@@ -104,8 +104,8 @@
               />
             </svg>
           </a>
-        </li>
-        <li class="social-wrapper footer__img-list">
+        </li> -->
+        <!-- <li class="social-wrapper footer__img-list">
           <a href="#" class="footer__youtube-wrapper">
             <svg
               class="social-img footer__youtube"
@@ -121,7 +121,7 @@
               />
             </svg>
           </a>
-        </li>
+        </li> -->
       </ul>
     </div>
   </footer>

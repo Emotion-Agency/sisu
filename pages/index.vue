@@ -1,18 +1,18 @@
 <template>
-  <div class="page">
+  <div data-route class="page">
     <app-header />
     <main>
       <section class="section section--nm home">
-        <div class="home__bg">
-          <app-video link="/videos/1" />
+        <div data-a-o class="home__bg">
+          <app-video link="/videos/1" poster="/images/sisu-bg.jpg" />
         </div>
         <div class="container home__wrapper">
           <div class="home__block">
-            <h1 class="home__title">
+            <h1 data-a-t class="home__title">
               Your Assets,<br />
               Your Dashboard.
             </h1>
-            <p class="home__desc">
+            <p data-a-t class="home__desc">
               A crypto portfolio tracker designed<br />for a new generation of
               digital assets.
             </p>
@@ -60,14 +60,14 @@
           </ul>
         </div>
         <div class="container">
-          <img
+          <div
             v-for="plate in plates"
             :key="plate.title"
             class="home-3__result-plate"
             :class="[plate.isActive && 'home-3__result-plate--active']"
-            :src="plate.relativeImg"
-            :alt="plate.title"
-          />
+          >
+            <app-image :src="plate.relativeImg" :alt="plate.title" />
+          </div>
         </div>
       </section>
       <section class="section section--pb home-4">
@@ -101,7 +101,9 @@
             customisable.”
           </h3>
           <p class="home-5__desc">
-            Etiënne vantKruys <br /><span class="home-5__desc-med">- TRGC</span>
+            Alexander Opeagbe <br /><span class="home-5__desc-med"
+              >- Dominance Ventures</span
+            >
           </p>
         </div>
       </section>
@@ -145,7 +147,7 @@
               <br />
               You can also explore SISU’s game changing features and learn how
               to get the best out of the platform by diving into the SISU
-              knowledge base
+              knowledge base.
             </p>
           </div>
         </div>
@@ -165,6 +167,8 @@ import AppPlates from '~/components/AppPlates.vue'
 import AppVideo from '~/components/AppVideo.vue'
 import AppFooter from '~/components/AppFooter.vue'
 import AppHeader from '~/components/AppHeader.vue'
+import transition from '~/mixins/transition'
+import AppImage from '~/components/AppImage.vue'
 
 export default {
   components: {
@@ -174,7 +178,9 @@ export default {
     AppVideo,
     AppFooter,
     AppHeader,
+    AppImage,
   },
+  mixins: [transition],
   data() {
     return {
       plates: [
@@ -231,14 +237,13 @@ export default {
       ],
     }
   },
+
   methods: {
     onHover(title) {
-      this.plates = this.plates.map(plate => {
-        if (plate.title === title) {
-          return { ...plate, isActive: true }
-        }
-        return { ...plate, isActive: false }
-      })
+      this.plates = this.plates.map(plate => ({
+        ...plate,
+        isActive: title === plate.title,
+      }))
     },
   },
 }

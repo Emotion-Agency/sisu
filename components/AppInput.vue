@@ -1,22 +1,23 @@
 <template>
-  <div class="input-wrapper">
-    <input
-      :id="id"
-      class="input form__input"
-      :class="[
-        focus && 'js-focus',
-        error && 'js-error',
-      ]"
-      :type="type"
-      :placeholder="placeholder"
-      :required="required"
-      data-validation="required"
-      :value="value"
-      @input="onInput"
-      @focus="onFocus"
-      @blur="onBlur"
-    />
-    <small v-if="error" class="form__input-error">{{ validationText }}</small>
+  <div class="input-bg">
+    <div class="input-wrapper">
+      <input
+        :id="id"
+        ref="input"
+        :name="name"
+        class="input form__input"
+        :class="[focus && 'js-focus', error && 'js-error']"
+        :type="type"
+        :placeholder="placeholder"
+        :required="required"
+        data-validation="required"
+        :value="value"
+        @input="onInput"
+        @focus="onFocus"
+        @blur="onBlur"
+      />
+      <small v-if="error" class="form__input-error">{{ validationText }}</small>
+    </div>
   </div>
 </template>
 
@@ -24,6 +25,10 @@
 import validator from '~/scripts/utils/Validation'
 export default {
   props: {
+    name: {
+      type: String,
+      default: '',
+    },
     id: {
       type: String,
       default: '',

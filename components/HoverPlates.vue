@@ -17,13 +17,15 @@
       </a>
     </div>
     <div class="home-3__plates-figure">
-      <img :src="img" :alt="title" />
+      <app-image :src="img" :alt="title" />
     </div>
   </li>
 </template>
 
 <script>
+import AppImage from './AppImage.vue'
 export default {
+  components: { AppImage },
   props: {
     title: {
       type: String,

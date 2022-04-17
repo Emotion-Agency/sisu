@@ -41,8 +41,8 @@
   height: vw(64);
 
   @media (max-width: $br1) {
-    width: 60px;
-    height: 64px;
+    width: 30px;
+    height: 32px;
   }
 }
 
@@ -53,7 +53,9 @@
 }
 
 .header__btn {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: vw(240);
   height: vw(48);
   border-radius: vw(16);
@@ -101,5 +103,40 @@
 
   @media (max-width: $br4) {
     font-size: 16px;
+  }
+}
+
+.header__social {
+  display: flex;
+}
+
+.header__img-list {
+  display: block;
+  width: vw(24);
+  height: vw(24);
+  margin-right: 36px;
+
+  svg path {
+    transition: fill 0.3s ease;
+  }
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+
+  @media (max-width: $br1) {
+    width: 18px;
+    height: 18px;
+    margin-right: 16px;
+  }
+
+  @media (min-width: $br2) {
+    &:hover {
+      svg {
+        path {
+          fill: white;
+        }
+      }
+    }
   }
 }

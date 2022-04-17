@@ -1,17 +1,13 @@
 .footer {
   padding-top: vw(90);
   padding-bottom: vw(120);
-  background: linear-gradient(
-      90deg,
+  background: linear-gradient(90deg,
       rgba(115, 212, 188, 0.72) 0%,
-      rgba(190, 236, 226, 0.72) 100%
-    ),
+      rgba(190, 236, 226, 0.72) 100%),
     linear-gradient(0deg, #49d6ba, #49d6ba),
-    linear-gradient(
-      117.17deg,
+    linear-gradient(117.17deg,
       rgba(73, 214, 186, 0.24) 0%,
-      rgba(255, 182, 10, 0.24) 100%
-    );
+      rgba(255, 182, 10, 0.24) 100%);
 
   @media (max-width: $br1) {
     padding-top: 90px;
@@ -85,6 +81,7 @@
   @media (max-width: $br1) {
     font-size: 18px;
   }
+
   &::after {
     content: '';
     display: block;
@@ -97,6 +94,7 @@
     left: auto;
     transition: width 0.3s ease;
   }
+
   &:hover {
     &::after {
       width: 100%;
@@ -118,9 +116,11 @@
 .footer__img-list {
   margin-top: vw(90);
   margin-right: vw(40);
+
   svg path {
     transition: fill 0.3s ease;
   }
+
   @media (min-width: $br2) {
     &:hover {
       svg {

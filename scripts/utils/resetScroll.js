@@ -8,7 +8,4 @@ export const resetScroll = () => {
     }
   }
   window.ss && (window.ss.isFixed = false)
-  setTimeout(() => {
-    window.parallax && window.parallax.update()
-  }, 0)
 }

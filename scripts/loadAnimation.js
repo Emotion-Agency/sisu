@@ -4,7 +4,7 @@ import { animations } from './animations'
 const noop = () => {}
 
 export const loadAnimation = cb => {
-  const $sc = document.querySelector('#scroll-container')
+  const $sc = document.body
   const $el = document.querySelector('[data-route]')
 
   const callback = cb || noop
