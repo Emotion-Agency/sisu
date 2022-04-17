@@ -1,5 +1,5 @@
 <template>
-  <a :href="link" class="btn">
+  <component :is="tag" v-bind="attr" class="btn">
     <span class="btn__bg"></span>
     <span class="btn__text">{{ text }}</span>
     <span class="btn__arrow">
@@ -17,7 +17,7 @@
         />
       </svg>
     </span>
-  </a>
+  </component>
 </template>
 
 <script>
@@ -30,7 +30,19 @@ export default {
     link: {
       type: String,
       default: '',
-    }
+    },
+    tag: {
+      type: String,
+      default: 'a',
+    },
+  },
+  computed: {
+    attr() {
+      const attrName = this.tag === 'a' ? 'href' : 'to'
+      return {
+        [attrName]: this.link,
+      }
+    },
   },
 }
 </script>

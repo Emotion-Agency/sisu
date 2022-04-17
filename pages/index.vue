@@ -31,7 +31,12 @@
               variety of popular exchanges, blockchain networks and DeFi
               protocols with just one app.
             </p>
-            <app-button class="home-2__btn" text="Quick Start" />
+            <app-button
+              class="home-2__btn"
+              text="Quick Start"
+              link="/signup"
+              tag="nuxt-link"
+            />
           </div>
         </div>
       </section>
@@ -102,7 +107,7 @@
           </h3>
           <p class="home-5__desc">
             Alexander Opeagbe <br /><span class="home-5__desc-med"
-              >- Dominance Ventures</span
+              >Dominance Ventures</span
             >
           </p>
         </div>
@@ -119,7 +124,12 @@
               multiple dashboard creation, SISU offers more functionality than
               any other crypto portfolio tracker.
             </p>
-            <app-button class="home-6__btn" text="Create Dashboard" />
+            <app-button
+              class="home-6__btn"
+              text="Create Dashboard"
+              link="/signup"
+              tag="nuxt-link"
+            />
           </div>
         </div>
       </section>
