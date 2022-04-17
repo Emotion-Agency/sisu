@@ -42,6 +42,8 @@ export default {
       useKeyboard: false,
       raf,
     })
+
+    this.$store.commit('app/setLoaded', true)
   },
 }
 </script>

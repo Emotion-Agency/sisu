@@ -1,18 +1,18 @@
 <template>
-  <div class="page">
+  <div data-route class="page">
     <app-header />
     <main>
       <section class="section section--nm home">
-        <div class="home__bg">
-          <app-video link="/videos/1" />
+        <div data-a-o class="home__bg">
+          <app-video link="/videos/1" poster="/images/sisu-bg.jpg" />
         </div>
         <div class="container home__wrapper">
           <div class="home__block">
-            <h1 class="home__title">
+            <h1 data-a-t class="home__title">
               Your Assets,<br />
               Your Dashboard.
             </h1>
-            <p class="home__desc">
+            <p data-a-t class="home__desc">
               A crypto portfolio tracker designed<br />for a new generation of
               digital assets.
             </p>
@@ -234,6 +234,12 @@ export default {
         },
       ],
     }
+  },
+
+  async mounted() {
+    const { OnScrollAppereance } = await import('~/scripts/OnScrollAppereance')
+
+    new OnScrollAppereance(document.querySelectorAll('.home-7__plates-list'))
   },
   methods: {
     onHover(title) {

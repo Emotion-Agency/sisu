@@ -148,7 +148,6 @@
   width: vw(180);
   height: vw(72);
   background-color: transparent;
-  transition: transform 0.3s ease;
   margin-top: vw(20);
 
   @media (max-width: $br1) {
@@ -160,8 +159,6 @@
 
   @media (min-width: $br2) {
     &:hover {
-      transform: scale(1.02);
-
       .signup__btn-bg {
         filter: blur(12px);
       }

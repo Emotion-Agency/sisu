@@ -1,18 +1,18 @@
 <template>
-  <div class="signup-page">
+  <div data-route class="signup-page">
     <app-header :is-default="false" />
     <section class="section section--nm signup">
-      <div class="signup__bg">
+      <div data-a-o class="signup__bg">
         <app-video link="/videos/1" />
       </div>
-      <div class="signup__blur"></div>
+      <div data-a-l class="signup__blur"></div>
       <div class="container signup__wrapper">
         <div class="signup__text-block">
-          <h1 class="signup__title">
+          <h1 data-a-t class="signup__title">
             We'll Let You Know<br />
             When It's Time...
           </h1>
-          <p class="signup__desc">
+          <p data-a-t class="signup__desc">
             With our public launch near,<br />
             be amongst the first to use SISU.
           </p>
@@ -23,6 +23,7 @@
             :id="input.id"
             ref="inputs"
             :key="input.name"
+            data-a-t
             class="form__input-wrapper"
             :type="input.type"
             :name="input.name"
@@ -33,7 +34,7 @@
             :validation-text="input.validationText"
             @inputValue="onInputValue"
           />
-          <button class="signup__btn">
+          <button data-a-t class="signup__btn">
             <span class="signup__btn-bg"></span>
             <span class="signup__text">Join!</span>
           </button>
