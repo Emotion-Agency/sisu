@@ -60,14 +60,14 @@
           </ul>
         </div>
         <div class="container">
-          <img
+          <div
             v-for="plate in plates"
             :key="plate.title"
             class="home-3__result-plate"
             :class="[plate.isActive && 'home-3__result-plate--active']"
-            :src="plate.relativeImg"
-            :alt="plate.title"
-          />
+          >
+            <app-image :src="plate.relativeImg" :alt="plate.title" />
+          </div>
         </div>
       </section>
       <section class="section section--pb home-4">
@@ -168,6 +168,7 @@ import AppVideo from '~/components/AppVideo.vue'
 import AppFooter from '~/components/AppFooter.vue'
 import AppHeader from '~/components/AppHeader.vue'
 import transition from '~/mixins/transition'
+import AppImage from '~/components/AppImage.vue'
 
 export default {
   components: {
@@ -177,6 +178,7 @@ export default {
     AppVideo,
     AppFooter,
     AppHeader,
+    AppImage,
   },
   mixins: [transition],
   data() {

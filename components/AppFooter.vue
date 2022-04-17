@@ -2,7 +2,7 @@
   <footer class="footer">
     <div class="container footer__nav">
       <div class="footer__links-block">
-        <a href="#" class="footer__logo-wrapper">
+        <nuxt-link to="/" class="footer__logo-wrapper">
           <svg
             class="footer__logo"
             width="60"
@@ -16,7 +16,7 @@
               fill="#333333"
             />
           </svg>
-        </a>
+        </nuxt-link>
         <ul class="footer__links">
           <li class="footer__list">
             <nuxt-link to="/" class="footer__nav-text">

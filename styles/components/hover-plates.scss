@@ -167,4 +167,9 @@
     height: auto;
     transform: translateY(0px);
   }
+  img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+  }
 }

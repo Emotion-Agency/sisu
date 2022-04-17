@@ -10,11 +10,11 @@ const config = {
   env: 'development',
   production,
   build: {
-    img: projectFolder + '/img/',
+    img: projectFolder + '/images/',
     fonts: projectFolder + '/fonts/',
   },
   src: {
-    img: sourceFolder + '/img/**/*.{jpg,png,svg,gif,ico,webp}',
+    img: sourceFolder + '/images/**/*.{jpg,png,svg,gif,ico,webp}',
     fonts: sourceFolder + '/fonts/*.ttf',
   },
 
